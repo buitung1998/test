@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product</title>
+</head>
+<body>
+    <table width="500" border="1">
+        <tr>
+            <td>id</td>
+            <td>product</td>
+            <td>amount</td>
+            <td><a href="../products/post">Post</a></td>
+        </tr>
+        <% products.forEach(x => { %>
+        <tr>
+            <td><%= x.id %></td>
+            <td><%= x.product %></td>
+            <td><%= x.amount %></td>
+            <td>
+                <a href="../products/edit/<%= x.id %>">Edit -</a>
+                <a href="../products/delete/<%= x.id %>">Dlete</a>
+            </td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
